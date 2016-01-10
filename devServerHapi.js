@@ -32,7 +32,7 @@ server.route({
 const compiler = new Webpack(config);
 
 const assets = {
-  noInfo:     false,
+  noInfo:     true,
   publicPath: config.output.publicPath
 };
 
