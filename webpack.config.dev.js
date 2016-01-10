@@ -25,7 +25,7 @@ module.exports = {
         include: path.join(__dirname, 'client/src')
       },
       {
-        test:    /\.js?$/,
+        test:    /\.jsx?$/,
         include: path.join(__dirname, 'client/src'),
         loader:  'eslint'
       },
