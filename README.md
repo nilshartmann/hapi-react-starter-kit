@@ -19,6 +19,15 @@ in some points:
 
 Open your browser at `http://localhost:3000` to see the simple counter application. Modify the JavaScript- or CSS-files and they are re-compiled and re-loaded in the browser automatically. The state of the React component will not be lost during reload.
 
+## Production build
+
+To create a production (minified, without hot loader) version of your application, just run:
+```
+npm run build:prod
+```
+
+The output goes to `public/dist/bundle.js`. You can point a webserver to `client/public` (i.e Pythons SimpleHTTPServer) and then open `index.html` to test your application
+
 # Modules
 
 Our starter kit contains the following modules:
@@ -46,6 +55,8 @@ We like to use Hapi as webserver in our projects. So we want Hapi to work togeth
 * `inert`: Handler for static files for Hapi (needed to server index.html file)
 * `hapi-webpack-plugin`: Embedds webpack middleware in Hapi. Supports hot reloading.
 
+Note: if you're using Hapi in your application (beside using it for the hotloading), move `hapi` (and `inert` if needed)
+from `devDependencies` to `dependencies` in your package.json file.
 
 ## Hotloading-related modules
 For React Hotloading we use the following modules:
@@ -54,12 +65,17 @@ For React Hotloading we use the following modules:
 * `react-transform-catch-errors`: A **transform** that renders compilation errors in components directly as an error message inside the affected component (in addition to the console where babel runs). Needs `webpack-hot-middleware`
 * `babel-preset-react-hmre`: A babel **preset** that includes the `babel-plugin-react-transform` along with two trasnforms (`react-transform-hmr` and  `react-transform-catch-errors`), making it easy to embedd this plug-ins in own projects (just by updating .babelrc file)
 * `webpack-hot-middleware` webpack-dev-server replacement. Allows embedding webpack in your own Webserver while still providing hotloading features.
+* `eventsource-polyfill` a polyfill needed for IE to support hot loading
+
+## Other modules
+* `rimraf`: cross-platform `rm -rf` node command
+
 
 # TODO
 
 * improve documentation
-* webpack config for production
 * build for serverside code
+* better configuration (esp for paths)
 
 
 
