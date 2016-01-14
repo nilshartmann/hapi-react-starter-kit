@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry:  [
-    './client/src/main'
+    './client/src/main.js'
   ],
   output: {
     path:       path.join(__dirname, 'client/public/dist'),
