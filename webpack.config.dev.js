@@ -1,6 +1,8 @@
 var path = require('path');
 var webpack = require('webpack');
 
+console.log("HELLO");
+
 module.exports = {
   devtool: 'cheap-module-eval-source-map',
   entry:   [
@@ -9,7 +11,7 @@ module.exports = {
     './client/src/main'
   ],
   output:  {
-    path:       path.join(__dirname, '_dist'),
+    path:       path.join(__dirname, 'client/public/dist'),
     filename:   'bundle.js',
     publicPath: '/dist'
   },
