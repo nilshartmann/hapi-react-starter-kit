@@ -12,8 +12,8 @@
   "author": "Nils Hartmann, Oliver Zeigermann",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6"
+    "react": "^15.0.0",
+    "react-dom": "^15.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.4.0",
